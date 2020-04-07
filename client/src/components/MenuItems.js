@@ -30,6 +30,14 @@ export const FolderListItems = ({ user }) => (
         <ListItemText primary="Profile" />
       </ListItem>
     </Link>
+    <Link style={{ textDecoration: 'none' }} to={`/chat/${user.userId}`}>
+      <ListItem button>
+        <ListItemIcon>
+          <FaceIcon />
+        </ListItemIcon>
+        <ListItemText primary="Chat" />
+      </ListItem>
+    </Link>
     <Link style={{ textDecoration: 'none' }} to="/following">
       <ListItem button>
         <ListItemIcon>

@@ -25,3 +25,9 @@ export const GET_ALL_USERS = 'GET_ALL_USERS';
 export const GET_USER = 'GET_USER';
 export const UPDATE_FOLLOWERS = 'UPDATE_FOLLOWERS';
 export const UPDATE_FOLLOWING = 'UPDATE_FOLLOWING';
+
+// chatActions
+export const ADD_MESSAGE = "ADD_MESSAGE"
+export const MESSAGE_RECEIVED = "MESSAGE_RECEIVED"
+export const ADD_USER = "ADD_USER"
+export const USERS_LIST = "USERS_LIST"

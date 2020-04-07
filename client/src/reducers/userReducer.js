@@ -4,8 +4,11 @@ import {
   GET_USER,
   GET_ALL_USERS,
   UPDATE_FOLLOWERS,
-  UPDATE_FOLLOWING
+  UPDATE_FOLLOWING,
+  ADD_USER, //chat
+  USERS_LIST //chat
 } from '../actions/actionTypes';
+import { CardActions } from '@material-ui/core';
 
 const initialState = {
   allUsers: [],
@@ -51,6 +54,13 @@ export default function (state = initialState, action) {
         ...state,
         following: action.payload.following
       };
+    // case ADD_USER: //chat
+    //   return state.concat([
+    //     {name:action.name, id: action.id}
+
+    //   ])
+    // case USERS_LIST: //chat
+    //   return actions.users
     default:
       return state;
   }

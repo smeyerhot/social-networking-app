@@ -11,6 +11,8 @@ import ProfilePage from '../containers/ProfilePage';
 import SettingsPage from '../containers/SettingsPage';
 import SignupPage from '../containers/SignupPage';
 import NotFound from './NotFound';
+import ChatComponent from './ChatComponent';
+
 
 initAnalytics('UA-126201794-1');
 export const history = createHistory();
@@ -24,6 +26,7 @@ const Root = () => (
     <Route path="/following" component={FollowingPage} />
     <Route path="/discover" component={DiscoverPage} />
     <Route path="/settings" component={SettingsPage} />
+    <Route path="/chat" component={ChatComponent} />
     <Route component={NotFound} />
   </Switch>
 );

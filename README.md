@@ -95,3 +95,7 @@ Optional: If you want to also deploy the app to Heroku, first go through the afo
 - Authentication was implemented with the help of Krunal Lathiya's [example](https://appdividend.com/2018/07/18/react-redux-node-mongodb-jwt-authentication/#React_Redux_Node_MongoDB_JWT_Authentication), Brad Traversy's [guide](https://www.youtube.com/watch?v=Z1ktxiqyiLA) on building a login system, and Maximilian Schwarzmüller's [guide](https://www.youtube.com/watch?v=0D5EEKH97NA) on JWT (primarily episodes 11 and 12).
 - Restful CRUD API builds on concepts explained in Andrew Mead's [Node.js course](https://www.udemy.com/the-complete-nodejs-developer-course-2/).
 - [Material-UI](https://material-ui.com/getting-started/installation/), [React](https://reactjs.org/docs/getting-started.html), [Redux](https://redux.js.org/introduction), [Mongoose](https://mongoosejs.com/docs/guide.html) documentation.
+# social-network-app
+# social-network-app
+# social-network-app
+# social-networking-app

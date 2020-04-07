@@ -10,6 +10,21 @@ const dbURI = process.env.REACT_APP_DB_URI || require('./secrets').dbURI;
 const app = express();
 const port = process.env.PORT || 5000;
 
+// const WebSocket = require('ws')
+
+// const wss = new WebSocket.Server({ port: 8989 })
+// console.log(typeof(users))
+// // const users = [] cant use there users
+
+// const broadcast = (data, ws) => {
+//   wss.clients.forEach((client) => {
+//     if (client.readyState === WebSocket.OPEN && client !== ws) {
+//       client.send(JSON.stringify(data))
+//     }
+//   })
+// }
+
+
 // Enable CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
