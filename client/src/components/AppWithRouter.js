@@ -12,7 +12,8 @@ import SettingsPage from '../containers/SettingsPage';
 import SignupPage from '../containers/SignupPage';
 import NotFound from './NotFound';
 import ChatComponent from './ChatComponent';
-
+import CoronaCard from './CoronaNews';
+import Starwars from './StarWarsComponent'
 
 initAnalytics('UA-126201794-1');
 export const history = createHistory();
@@ -27,6 +28,9 @@ const Root = () => (
     <Route path="/discover" component={DiscoverPage} />
     <Route path="/settings" component={SettingsPage} />
     <Route path="/chat" component={ChatComponent} />
+    <Route path="/corona-news" component={CoronaCard} />
+    <Route path="/starwars" component={Starwars} />
+
     <Route component={NotFound} />
   </Switch>
 );

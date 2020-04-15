@@ -30,9 +30,10 @@ const styles = theme => ({
     textAlign: 'center'
   }
 });
-
+console.log(this.props);
 class UserCard extends Component {
   followThisUser = (signedInUserId, listedUserId) => {
+    console.log(`props inside userCard${this.props}`);
     const { followUser } = this.props;
     followUser(signedInUserId, listedUserId);
   };

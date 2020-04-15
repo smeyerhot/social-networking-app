@@ -1,11 +1,13 @@
 # MERN Social Network
 
-![Build Status](https://travis-ci.com/jm-shi/MERN-Social-Network.svg?branch=master)
+Adapted and extended from the https://github.com/jm-shi/MERN-Social-Network/
+
+<!-- ![Build Status](https://travis-ci.com/jm-shi/MERN-Social-Network.svg?branch=master) --> 
 
 
 A MERN stack social network application with MVP features implemented: user authentication, profile viewing, posting, commenting, and following/unfollowing.
 
-## Demo
+<!-- ## Demo
 
 [MERN Social Network](https://mern-social-network.herokuapp.com/)
 
@@ -19,7 +21,7 @@ Comment                    |  Discover
 
 Profile                    |  Edit
 :-------------------------:|:-------------------------:
-![Profile](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/profile.png)  |  ![Edit](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/edit.png)
+![Profile](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/profile.png)  |  ![Edit](https://github.com/jm-shi/MERN-Social-Network/blob/master/demo/edit.png) -->
 
 
 ## User Stories
@@ -44,7 +46,7 @@ Profile                    |  Edit
 - Improve code organization
 - Write more tests
 
-## Setup instructions (tested on macOS 10.15 Catalina)
+## Setup instructions 
 
 First install the dependencies:
 

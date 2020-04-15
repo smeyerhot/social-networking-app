@@ -5,31 +5,48 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 
 import App from './components/App';
-import createStore from './store';
+
 import setAuthToken from './setAuthToken';
 import { logoutUser, setCurrentUser } from './actions/authActions';
 import './index.css';
-
 import { addUser } from './actions/chatActions'
 
-const store = createStore()
+import reducers from './reducers/rootReducer'
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga'
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/rootReducer';
+import setupSocket from './sockets'
+import handleNewMessage from './sagas'
+import username from './utils/name'
+
+
+const sagaMiddleware = createSagaMiddleware()
+
+
+const middleWares = [sagaMiddleware, thunk]
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleWares)));
+
+const socket = setupSocket(store.dispatch, username)
+sagaMiddleware.run(handleNewMessage, {socket, username})
 // import { createStore, applyMiddleware } from 'redux'
-// import createSagaMiddleware from 'redux-saga'
-store.dispatch(addUser('Me'))
+// const userName = userReducer
+
 
 // import setupSocket from './sockets'
 // import reducers from './reducers'
-// import handleNewMessage from './sagas'
+
 // import username from './utils/name'
 
-// const sagaMiddleware = createSagaMiddleware()
 
+// const socket = setupSocket(store.dispatch, username)
 // const store = createStore(
 // 	reducers,
 // 	applyMiddleware(sagaMiddleware)
 // )
 
-// const socket = setupSocket(store.dispatch, username)
 
 // sagaMiddleware.run(handleNewMessage, {socket, username})
 
