@@ -19,6 +19,16 @@ services:
       - node_modules_b:/usr/src/app/node_modules
     depends_on: 
       - mongo
+  
+  chat:
+    build: .
+    ports:
+      - 8989:8989
+    volumes:
+      - .:/usr/src/app
+      - node_modules_b:/usr/src/app/node_modules
+    depends_on: 
+      - mongo
 
   mongo:
     image: mongo
@@ -26,6 +36,18 @@ services:
       - data:/data/db
     ports:
       - "27017:27017"
+  
+  nginx:
+    build:
+      context: ./services/nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+      - client
+      - chat
 
 volumes: 
   node_modules:

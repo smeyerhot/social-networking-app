@@ -6,8 +6,10 @@ export default function Starwars() {
   let [charIndex, setCharIndex] = useState(1);
   const [character, setCharacter] = useState({});
 
-  // const api = `https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/id/${charIndex}.json`;
-  const api = 'https://fmpcloud.io/api/v3/rss_feed?apikey=f60cadbc344da7a002809e9548508044'
+  const url = `https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/id/${charIndex}.json`;
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const api = proxyurl + url
+  // const api = "https://newsapi.org/v2/top-headlines?country=us&apiKey=d5cf45043cd34b59b432df10e3cef274"
   useEffect(() => {
     const loadChar = async () => {
       const result = await axios(api);
@@ -40,7 +42,9 @@ export default function Starwars() {
 
   const buttonsHTML = (
     <div className="buttons-container">
-      <button onClick={incCounter} value="next" />
+      <button onClick={incCounter} value="next" >
+        Click Me
+      </button>
     </div>
   );
 

@@ -34,3 +34,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(HomePage);
+//return an function and then called again using this return value

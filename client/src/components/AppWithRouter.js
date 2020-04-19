@@ -14,6 +14,7 @@ import NotFound from './NotFound';
 import ChatComponent from './ChatComponent';
 import CoronaCard from './CoronaNews';
 import Starwars from './StarWarsComponent'
+import NewShop from './NewShop'
 
 initAnalytics('UA-126201794-1');
 export const history = createHistory();
@@ -29,7 +30,8 @@ const Root = () => (
     <Route path="/settings" component={SettingsPage} />
     <Route path="/chat" component={ChatComponent} />
     <Route path="/corona-news" component={CoronaCard} />
-    <Route path="/starwars" component={Starwars} />
+    <Route path="/starwars" component={Starwars} /> 
+    <Route path="/new-shop" component={NewShop} />
 
     <Route component={NotFound} />
   </Switch>

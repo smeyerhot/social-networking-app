@@ -16,7 +16,9 @@ const WebSocket = require('ws')
 const wss = new WebSocket.Server({ port: 8989 })
 // console.log(typeof(users))
 const users = [] 
-const something = {"1": "hello"}
+
+
+
 
 const broadcast = (data, ws) => {
   wss.clients.forEach((client) => {
@@ -65,7 +67,7 @@ wss.on('connection', (ws) => {
   })
 })
 
-app.use(cors())
+// app.use(cors())
 // Enable CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -95,7 +97,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 app.use('/posts', posts);
 app.use('/users', people);
-// app.use('/something', something);
+app.use('/create-shop', shop);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));

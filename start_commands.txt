@@ -1,1 +1,3 @@
 nodemon -L  --exec npm start
+
+ docker exec -it 990129f45c23 /bin/bash

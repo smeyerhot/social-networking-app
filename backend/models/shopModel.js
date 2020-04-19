@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-import crypto from 'crypto'
+const mongoose = require('mongoose');
+const crypto = require('crypto');
 const { Schema } = mongoose;
 
 const ShopSchema = new Schema({
@@ -24,4 +24,4 @@ const ShopSchema = new Schema({
     owner: {type: mongoose.Schema.ObjectId, ref: 'User'}
 })
 
-export default mongoose.model('Shop, ShopSchema')
+module.exports = mongoose.model('Shop', ShopSchema)

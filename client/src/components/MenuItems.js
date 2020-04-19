@@ -46,6 +46,14 @@ export const FolderListItems = ({ user }) => (
         <ListItemText primary="Corona News" />
       </ListItem>
     </Link>
+    <Link style={{ textDecoration: 'none' }} to={"/new-shop"}>
+      <ListItem button>
+        <ListItemIcon>
+          <FaceIcon />
+        </ListItemIcon>
+        <ListItemText primary="NewShop" />
+      </ListItem>
+    </Link>
     <Link style={{ textDecoration: 'none' }} to={`/starwars/${user.userId}`}>
       <ListItem button>
         <ListItemIcon>
